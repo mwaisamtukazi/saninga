@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Personal Finance Tracker</h1>
+        <p>Track your income and expenses to manage your finances better!</p>
+    </header>
+
+    <div class="container">
+        <!-- Income and Expense Form Section -->
+        <section class="expense-form">
+            <h2>Enter Your Income</h2>
+            <input type="number" id="income" placeholder="Enter your monthly income" required>
+            <button onclick="setIncome()">Set Income</button>
+        </section>
+
+        <section class="expense-form">
+            <h2>Track Your Expenses</h2>
+            <select id="category">
+                <option value="food">Food</option>
+                <option value="transport">Transport</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="utilities">Utilities</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="number" id="expenseAmount" placeholder="Enter expense amount" required>
+            <button onclick="addExpense()">Add Expense</button>
+        </section>
+
+        <!-- Expense Summary Section -->
+        <section class="expense-summary">
+            <h2>Expense Summary</h2>
+            <p>Total Income: <span id="totalIncome">Tsh 0</span></p>
+            <p>Total Expenses: <span id="totalExpenses">Tsh 0</span></p>
+            <p>Balance: <span id="balance">Tsh 0</span></p>
+            <p>Percentage of Income Spent: <span id="expensePercentage">0%</span></p>
+        </section>
+
+        <!-- Expense List Section -->
+        <section class="expense-section">
+            <h2>Your Expenses</h2>
+            <ul id="expenseList"></ul>
+        </section>
+
+        <!-- AI Suggestions Section -->
+        <section class="ai-suggestions">
+            <h2>AI Suggestions</h2>
+            <p id="aiSuggestion"></p>
+        </section>
+
+        <!-- Expenditure Graph Section -->
+        <section class="graph-section">
+            <h2>Real-Time Expenditures</h2>
+            <canvas id="expenditureChart"></canvas>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>Made by <strong>Emilias Saninga</strong></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
